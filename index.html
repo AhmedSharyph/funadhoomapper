@@ -16,6 +16,7 @@
       height: 400px;
       width: 100%;
       border-radius: 0.5rem;
+      margin-bottom: 1rem;
     }
     #response.success {
       color: green;
@@ -30,20 +31,20 @@
 <div class="container py-5" style="max-width: 700px; margin:auto;">
   <h2 class="mb-4 text-center">Submit New Location</h2>
 
-  <form id="addressForm">
-    <div class="mb-3">
-      <label for="Address" class="form-label">Address</label>
-      <input list="addressList" id="Address" name="Address" class="form-control" placeholder="Select or type an address" required />
-      <datalist id="addressList"></datalist>
-    </div>
+  <div class="mb-3">
+    <div id="map"></div>
+  </div>
 
+  <form id="addressForm">
     <div class="mb-3">
       <label for="Location" class="form-label">Coordinates</label>
       <input type="text" id="Location" name="Coordinates" class="form-control" placeholder="Click on the map" readonly required />
     </div>
 
     <div class="mb-3">
-      <div id="map"></div>
+      <label for="Address" class="form-label">Address</label>
+      <input list="addressList" id="Address" name="Address" class="form-control" placeholder="Select or type an address" required />
+      <datalist id="addressList"></datalist>
     </div>
 
     <button type="submit" class="btn btn-primary w-100" id="submitBtn">Submit</button>
